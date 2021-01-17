@@ -58,6 +58,15 @@ const App = () => {
         >
           Soumit
         </a>
+        <br />
+        Source:{" "}
+        <a
+          href="https://github.com/soumitdas/shopify-challenge-frontend"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
       </footer>
     </>
   );
