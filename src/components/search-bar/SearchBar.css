@@ -1,0 +1,18 @@
+:root {
+  --grey: #2a2e35;
+  --grey-light: #6c7983;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 0.5em;
+  border: none;
+  border-bottom: 2px solid var(--grey-light);
+  background: var(--grey);
+  font-size: 1em;
+  font-weight: 500;
+  color: inherit;
+  outline: none;
+  display: block;
+  font-family: inherit;
+}

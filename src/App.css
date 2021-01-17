@@ -1,38 +1,120 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --font: "Poppins", sans-serif;
+  --font-size-small: 1.8rem;
+  --font-size-normal: 2.2rem;
+
+  --line-height-normal: 1.7;
+
+  --orange: #ff8a00;
+  --black: #17141d;
+  --white: #fff;
+  --white-1: #e5e5e6da;
+  --light-dark: #7a7a8c;
+
+  --container-max-width: 1180px;
+
+  --gutter-normal: 3rem;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: var(--font-size-normal);
+  font-family: var(--font);
+  font-weight: 400;
+  color: var(--white-1);
+  line-height: var(--line-height-normal);
+  background: var(--black);
+  overflow-x: hidden;
+}
+
+img {
+  object-fit: contain;
+  max-width: 100%;
+}
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+@media (max-width: 1340px) {
+  .container {
+    max-width: 1100px;
+  }
+}
+
+@media (max-width: 1240px) {
+  .container {
+    padding: 0 var(--gutter-normal);
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    max-width: 0 var(--gutter-normal);
+  }
+}
+
+.header {
   text-align: center;
+  padding: var(--gutter-normal);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1,
+h2,
+h3 {
+  color: var(--white);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search-result-header {
+  margin: 2rem 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.error-msg {
+  color: #dc2626;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.loading-icon {
+  text-align: center;
+  width: 50px;
+  margin: 0 auto;
+}
+
+.main-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+@media (max-width: 600px) {
+  .main-container {
+    flex-direction: column-reverse;
+  }
+
+  .header {
+    font-size: var(--font-size-small);
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wrapper {
+  min-height: calc(100vh - 23rem);
+}
+
+.footer {
+  text-align: center;
+  margin: 2rem 0;
+  padding: 10rem 0 5rem;
 }

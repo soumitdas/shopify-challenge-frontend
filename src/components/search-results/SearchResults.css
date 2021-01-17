@@ -1,0 +1,12 @@
+.search-result-container {
+  --gap: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
+  width: calc(100% + var(--gap));
+  flex-basis: 70%;
+}
+
+.search-result-container > * {
+  margin: var(--gap) 0 0 var(--gap);
+}
